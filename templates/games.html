@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}Fun!{% endblock %}
+
+{% block content %}
+
+  <h2>Games</h2>
+  <table class="table">
+    <thead>
+    <th>Name</th>
+    <th>Description</th>
+    </thead>
+    <tbody>
+    {% for game in games %}
+      <tr>
+        <td>{{ game.name }}</td>
+        <td>{{ game.description }}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+
+{% endblock %}
